@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Trip Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container app-wrapper">
+      <header><h1>Day Trip Guide</h1></header>
+
+      <main class="main">
+        <div>
+          <h3 class="temperature"></h3>
+        </div>
+
+        <section class="feed-section">
+          <div class="loading-indicator">
+            <p id="loading-text">
+              <span class="bounce-up">Building</span>
+              <span class="bounce-down">your</span>
+              <span class="bounce-down">dream</span>
+              <span class="bounce-up">one-day</span>
+              <span class="bounce-down">journey...</span>
+              <span class="loading-spinner"></span>
+            </p>
+            <p id="countdown">30s</p>
+          </div>
+          <div class="itinerary"></div>
+        </section>
+
+        <section class="input-section">
+          <input
+            class="place-input"
+            type="text"
+            placeholder="Location (e.g., Sydney)"
+          />
+          <button onclick="handleUserInput()" type="submit" class="submit-btn">
+            Go!
+          </button>
+        </section>
+      </main>
+
+      <footer>Copyright 2023</footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
