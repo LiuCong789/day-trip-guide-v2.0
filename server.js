@@ -1,10 +1,10 @@
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
+const openaiApiKey = process.env.OPENAI_API_KEY;
+const fetch = require("node-fetch");
 const express = require("express");
 const app = express();
-const fetch = require("node-fetch");
 const bodyParser = require("body-parser");
-const openaiApiKey = process.env.OPENAI_API_KEY;
 const helmet = require("helmet");
 const compression = require("compression");
 
@@ -76,7 +76,7 @@ app.post("/find-trip", async (req, res) => {
       throw new Error(`API request failed: ${response.statusText}`);
     }
 
-    const jsonRes = await response.json();
+    const jsonRes = await getMessage.json();
     res.send(jsonRes);
   } catch (error) {
     console.error(error);
