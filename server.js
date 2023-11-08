@@ -24,9 +24,6 @@ app.use(function (err, req, res, next) {
 
 app.post("/find-trip", async (req, res) => {
   const findTrip = req.body;
-  // console.log(findTrip);
-
-  // const OPENAI_API_KEY = "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";
 
   const getMessage = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
